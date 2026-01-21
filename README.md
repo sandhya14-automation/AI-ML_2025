@@ -1,86 +1,148 @@
-### **Used Car Price Prediction Based on Age of Car**
+# **Machine Learning with Python: Linear Regression (One Variable)**
 
-This project demonstrates how to predict the price of a used car based on its age using Linear Regression. The workflow includes data loading, visualization, model training, parameter interpretation, and prediction.
+This document provides clear, beginner‑friendly explanations for two linear regression projects:
+
+- **Used Car Price Prediction based on car age**
+
+- **Student Score Prediction based on hours studied**
+
+Both projects follow the same ML workflow: data loading, visualization, model training, parameter interpretation, prediction, and regression line plotting.
+
+### **1. Used Car Price Prediction**
+
+Predict the price of a used car based on its age using Linear Regression.
 
 **Project Overview**
 
-Car prices typically decrease as the vehicle gets older. Using a simple linear regression model, this project analyzes the relationship between car age (in years) and car price, then predicts the price of a car of any given age.
+Car prices typically decrease as the vehicle gets older. This project models the relationship between car age (years) and car price, then predicts the price for any given age.
 
 **Dataset**
 
-The project uses a CSV file named car_prices.csv containing:
+The dataset car_prices.csv contains:
 
-| Column Name   | Description               |
+| Column        | Description               |
 | ------------- | ------------------------- |
 | car_age_years | Age of the car in years   |
 | price         | Market price of the used car |
-
-Ensure the CSV file is placed in the same directory as the script.
-
-**Libraries Used**
-
-NumPy – numerical computations
-
-Pandas – data loading and manipulation
-
-Matplotlib – data visualization
-
-Scikit-learn – linear regression model
 
 **Steps Performed**
 
 1. Import Libraries
 
-All required Python libraries are imported to handle data, visualization, and modeling.
+NumPy, Pandas, Matplotlib, and Scikit‑learn.
 
 2. Load Dataset
 
-The dataset is loaded and displayed using Pandas.
+Read the CSV file and display the data.
 
-3. Visualize the Data
+3. Visualize Data
 
-A scatter plot is created to observe how car price changes with age.
+Scatter plot of car age vs. price to observe the trend.
 
-4. Prepare Data for Modeling
+4. Prepare Data
 
-X → independent variable (car_age_years)
+X = car_age_years (independent variable)
 
-y → dependent variable (price)
+y = price (dependent variable)
 
-X is reshaped into 2D format as required by Scikit-learn.
+X reshaped into 2D format.
 
-5. Train the Linear Regression Model
+5. Train Model
 
-A Linear Regression model is created and trained using the dataset.
+A Linear Regression model is created and trained.
 
-6. View Model Parameters
+6. Model Parameters
 
-Intercept (b0): Estimated price of a brand-new car
+Intercept (b0): price when age = 0
 
-Coefficient (b1): Price drop per additional year of age
+Coefficient (b1): price drop per year
 
 7. Predict Price
 
-Example: Predicting the price of a 4.5-year-old car.
+Example: predict price for a 4.5‑year‑old car.
 
 8. Plot Regression Line
 
-A regression line is drawn over the scatter plot to visualize the model fit.
+Scatter plot + regression line overlay.
 
 **Output**
 
-- Scatter plot of car age vs. price
+- Scatter plot
 - Regression line
-- Model intercept and coefficient
-- Predicted price for a given car age
+- Model parameters
+- Predicted price
+
+### **2. Student Score Prediction**
+
+Predict a student's test score based on hours studied using Linear Regression.
+
+**Problem Statement**
+
+Build a machine learning model that predicts student test scores from hours studied.
+
+**Dataset**
+
+The dataset study_scores.csv contains:
+
+| Column        | Description           |
+| ------------- | --------------------- |
+| hours_studied | Number of study hours |
+| score         | Test score achieved   |
+
+**Steps Performed**
+
+1. Import Libraries
+
+Pandas, Matplotlib, and Scikit‑learn.
+
+2. Load Dataset
+
+Read and display the dataset.
+
+3. Visualize Data
+
+Scatter plot of hours studied vs. score to understand the relationship.
+
+4. Prepare Data
+
+x = hours_studied (independent variable)
+
+y = score (dependent variable)
+
+x reshaped into 2D format.
+
+5. Train Model
+
+Linear Regression model is created and trained.
+
+6. Model Parameters
+
+Intercept (b0): base score when hours = 0
+
+Coefficient (b1): score increase per hour studied
+
+7. Predict Score
+
+Example: predict score for a student who studied 7.2 hours.
+
+8. Plot Regression Line
+
+Scatter plot + regression line overlay.
+
+**Output**
+
+- Scatter plot
+- Regression line
+- Model parameters
+- Predicted score
 
 **Conclusion**
 
-This project successfully:
+Both projects demonstrate how simple linear regression can:
 
-- Visualizes the relationship between car age and price
-- Trains a linear regression model
-- Computes model parameters
-- Predicts car prices based on age
+- Visualize relationships between variables
+- Train predictive models
+- Interpret intercepts and slopes
+Make real‑world predictions
 
-It serves as a simple and effective introduction to machine learning regression techniques.
+These examples form a strong foundation for more advanced machine learning techniques.
